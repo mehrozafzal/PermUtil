@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import com.mehroz.permutil.PermissionCallback
-import com.mehroz.permutil.PermissionHelper
+import com.mehroz.permutil.PermissionUtil
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
-    private var permissionHelper: PermissionHelper? = null
+    private var permissionUtil: PermissionUtil? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        permissionHelper = PermissionHelper(
+        permissionUtil = PermissionUtil(
             this, arrayOf(
                 Manifest.permission.CAMERA,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             100
         )
 
-        permissionHelper!!.request(object : PermissionCallback {
+        permissionUtil!!.request(object : PermissionCallback {
             override fun onPermissionGranted() {
                 Log.d(TAG, "onPermissionGranted() called")
             }
@@ -62,6 +62,6 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        permissionHelper?.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        permissionUtil?.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }

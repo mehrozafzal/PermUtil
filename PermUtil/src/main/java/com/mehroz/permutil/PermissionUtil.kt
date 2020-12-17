@@ -12,9 +12,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import java.util.ArrayList
 
-class PermissionHelper {
+class PermissionUtil {
 
-    private val TAG = PermissionHelper::class.java.simpleName
+    private val TAG = PermissionUtil::class.java.simpleName
     private var REQUEST_CODE: Int = 0
 
     private var activity: Activity? = null
