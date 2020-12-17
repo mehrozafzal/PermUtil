@@ -1,3 +1,3 @@
 include ':PermUtil'
 include ':app'
-rootProject.name = "PermUtil"
+rootProject.name = "Permission"
