@@ -3,9 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 ext {
-    PUBLISH_GROUP_ID = 'com.master.android'
-    PUBLISH_ARTIFACT_ID = 'PermUtil'
-    PUBLISH_VERSION = '1.0'
+    group = 'com.master.android'
+    artifacts = 'PermUtil'
+    version = '1.0'
 }
 android {
     compileSdkVersion 30
