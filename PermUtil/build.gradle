@@ -4,7 +4,7 @@ plugins {
 }
 ext {
     group = 'com.master.android'
-    artifacts = 'PermUtil'
+    artifact = 'PermUtil'
     version = '1.0'
 }
 android {
