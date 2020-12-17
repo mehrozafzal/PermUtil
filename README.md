@@ -3,8 +3,19 @@
 
 [![](https://jitpack.io/v/mehrozafzal/PermUtil.svg)](https://jitpack.io/#mehrozafzal/PermUtil)
 
-### Add this in gradle
+### Add this in gradle.xml
 Include the following dependency in your apps build.gradle file.
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
 
 ### Download
-implementation 'com.github.mehrozafzal:PermUtil:Tag'
+Include the following dependency in your apps build.gradle file.
+```
+implementation 'com.master.android:permissionhelper:2.1'
+```
